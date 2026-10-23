@@ -7,8 +7,10 @@
 <style>
 :root{--purple:#261044;--purple2:#3d1769;--gold:#ffd43b;--cream:#fff4df;--pink:#ff4c91;--ink:#28153c}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;color:white;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% 0,#70429b 0,transparent 38%),linear-gradient(145deg,#160927,#321052 60%,#4c175f)}
-button{font:inherit;font-weight:850;border:0;cursor:pointer;touch-action:manipulation;transition:transform .12s,filter .12s}button:hover{filter:brightness(1.08)}button:active{transform:scale(.97)}.wrap{max-width:1040px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:1000;font-size:clamp(1.35rem,4vw,2.2rem);letter-spacing:-.04em;text-shadow:0 3px 0 #12051e}.brand span{color:var(--gold)}.pill{border:2px solid #ffffff35;background:#ffffff12;border-radius:999px;padding:9px 14px;font-weight:800}.panel{background:#fffaf0;color:var(--ink);border:4px solid var(--gold);border-radius:26px;box-shadow:0 14px 0 #13062180,0 20px 45px #0004;padding:clamp(16px,3vw,26px);margin-top:18px}.hero{text-align:center}.hero h1{font-size:clamp(2rem,7vw,4.5rem);line-height:.98;margin:6px 0 12px;color:#4c1a75}.hero p{font-size:1.05rem;font-weight:650}.btn{min-height:58px;padding:13px 24px;border-radius:17px;background:linear-gradient(#ffe96a,#ffbf25);color:#35134e;box-shadow:0 5px 0 #b97a09;font-size:1.05rem}.btn.secondary{background:linear-gradient(#ff8fc1,#ff4d93);color:white;box-shadow:0 5px 0 #a91f62}.btn.dark{background:linear-gradient(#7644a4,#512179);color:white;box-shadow:0 5px 0 #2b0e42}.levelgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin-top:18px}.levelbtn{min-height:100px;border:3px solid #f5ca49;border-radius:18px;background:linear-gradient(145deg,#fff,#ffe6bd);color:#381852;padding:12px}.levelbtn b{display:block;font-size:1.2rem}.levelbtn small{display:block;margin-top:5px;font-weight:700}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:18px;align-items:start}.board-wrap{position:relative;overflow:visible;background:linear-gradient(145deg,#371257,#1b0b2e);padding:10px;border:4px solid #ffd43b;border-radius:22px;box-shadow:inset 0 0 0 2px #ffffff25}.board{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;aspect-ratio:1}.cell{display:grid;place-items:center;min-width:0;aspect-ratio:1;border-radius:10px;background:#ffffff12;border:1px solid #ffffff18;padding:1px;user-select:none}.cell.blocked{background:repeating-linear-gradient(135deg,#1b0b2d,#1b0b2d 7px,#28123d 7px,#28123d 14px);opacity:.65}.tile{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 3px 2px #0006);cursor:pointer}.cell.selected{outline:4px solid #fff36b;outline-offset:-3px;background:#ffe66d35}.side{display:grid;gap:12px}.stat{background:#fff5df;border:3px solid #f5ca49;color:#32144c;border-radius:18px;padding:13px;text-align:center}.stat small{font-weight:800;display:block;text-transform:uppercase;letter-spacing:.06em}.stat strong{font-size:1.7rem}.hint{color:#5e4a6d;font-size:.9rem;line-height:1.4;font-weight:650}.message{font-weight:800;color:#522179;min-height:26px}.overlay{position:fixed;inset:0;z-index:10;background:#080313eF;display:flex;align-items:center;justify-content:center;padding:14px}.ad-card{width:min(650px,100%);max-height:96vh;overflow:auto;text-align:center;background:linear-gradient(145deg,#211047,#48206f);border:5px solid #ffd43b;border-radius:28px;padding:16px;box-shadow:0 0 0 5px #ffcc3340,0 18px 60px #0009}.ad-card h2{font-size:clamp(1.2rem,4vw,1.7rem);color:#ffe66d;margin:4px}.ad-card .slogan{font-size:clamp(1.9rem,7vw,3rem);font-weight:1000;line-height:1.03;margin:7px 0 14px;text-shadow:0 3px 0 #12051e}.ad-photo{display:block;max-width:100%;height:min(54vh,530px);object-fit:contain;margin:auto;border:5px solid #ffcf37;border-radius:18px;background:#fff4cf;padding:5px}.ad-bottom{display:flex;justify-content:center;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}.ad-count{color:#ffe66d;font-size:.88rem;font-weight:850}.particle-layer{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:5}.particle{position:absolute;width:8px;height:8px;border-radius:2px;pointer-events:none;will-change:transform,opacity;animation:particleFly .62s cubic-bezier(.12,.65,.35,1) forwards;box-shadow:0 0 5px #fff8}@keyframes particleFly{0%{transform:translate(0,0) rotate(0) scale(1);opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.15);opacity:0}}.hidden{display:none!important}.modal-title{font-size:clamp(1.7rem,5vw,2.5rem);color:#4c1a75;margin:0}.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.footer{text-align:center;color:#d6c6e7;font-size:.8rem;padding:20px}
-@media(max-width:700px){.wrap{padding:12px}.game-layout{grid-template-columns:1fr}.side{grid-template-columns:repeat(3,minmax(0,1fr));order:-1}.stat{padding:8px 4px}.stat strong{font-size:1.25rem}.stat small{font-size:.68rem}.board-wrap{padding:6px;border-width:3px}.board{gap:3px}.cell{border-radius:7px}.hint{grid-column:1/-1;text-align:center}.game-actions{display:flex;gap:8px}.game-actions button{flex:1;min-height:52px;padding:10px 8px}.panel{margin-top:12px}}
+button{font:inherit;font-weight:850;border:0;cursor:pointer;touch-action:manipulation;transition:transform .12s,filter .12s}button:hover{filter:brightness(1.08)}button:active{transform:scale(.97)}.wrap{max-width:1500px;margin:auto;padding:clamp(10px,1.8vw,24px)}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:1000;font-size:clamp(1.35rem,4vw,2.2rem);letter-spacing:-.04em;text-shadow:0 3px 0 #12051e}.brand span{color:var(--gold)}.pill{border:2px solid #ffffff35;background:#ffffff12;border-radius:999px;padding:9px 14px;font-weight:800}.panel{background:#fffaf0;color:var(--ink);border:4px solid var(--gold);border-radius:26px;box-shadow:0 14px 0 #13062180,0 20px 45px #0004;padding:clamp(16px,3vw,26px);margin-top:18px}.hero{text-align:center}.hero h1{font-size:clamp(2rem,7vw,4.5rem);line-height:.98;margin:6px 0 12px;color:#4c1a75}.hero p{font-size:1.05rem;font-weight:650}.btn{min-height:58px;padding:13px 24px;border-radius:17px;background:linear-gradient(#ffe96a,#ffbf25);color:#35134e;box-shadow:0 5px 0 #b97a09;font-size:1.05rem}.btn.secondary{background:linear-gradient(#ff8fc1,#ff4d93);color:white;box-shadow:0 5px 0 #a91f62}.btn.dark{background:linear-gradient(#7644a4,#512179);color:white;box-shadow:0 5px 0 #2b0e42}.levelgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin-top:18px}.levelbtn{min-height:100px;border:3px solid #f5ca49;border-radius:18px;background:linear-gradient(145deg,#fff,#ffe6bd);color:#381852;padding:12px}.levelbtn b{display:block;font-size:1.2rem}.levelbtn small{display:block;margin-top:5px;font-weight:700}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 205px;gap:14px;align-items:start}.game-layout .board-wrap{width:100%;max-width:none}.game-layout .board{width:100%;aspect-ratio:1;gap:clamp(3px,.45vw,7px)}.board-wrap{position:relative;overflow:visible;background:linear-gradient(145deg,#371257,#1b0b2e);padding:10px;border:4px solid #ffd43b;border-radius:22px;box-shadow:inset 0 0 0 2px #ffffff25}.board{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;aspect-ratio:1}.cell{display:grid;place-items:center;min-width:0;aspect-ratio:1;border-radius:10px;background:#ffffff12;border:1px solid #ffffff18;padding:1px;user-select:none}.cell.blocked{background:repeating-linear-gradient(135deg,#1b0b2d,#1b0b2d 7px,#28123d 7px,#28123d 14px);opacity:.65}.tile{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 3px 2px #0006);cursor:pointer}.cell.selected{outline:4px solid #fff36b;outline-offset:-3px;background:#ffe66d35}.side{display:grid;gap:12px}.stat{background:#fff5df;border:3px solid #f5ca49;color:#32144c;border-radius:18px;padding:13px;text-align:center}.stat small{font-weight:800;display:block;text-transform:uppercase;letter-spacing:.06em}.stat strong{font-size:1.7rem}.hint{color:#5e4a6d;font-size:.9rem;line-height:1.4;font-weight:650}.message{font-weight:800;color:#522179;min-height:26px}.overlay{position:fixed;inset:0;z-index:10;background:#080313eF;display:flex;align-items:center;justify-content:center;padding:14px}.ad-card{width:min(650px,100%);max-height:96vh;overflow:auto;text-align:center;background:linear-gradient(145deg,#211047,#48206f);border:5px solid #ffd43b;border-radius:28px;padding:16px;box-shadow:0 0 0 5px #ffcc3340,0 18px 60px #0009}.ad-card h2{font-size:clamp(1.2rem,4vw,1.7rem);color:#ffe66d;margin:4px}.ad-card .slogan{font-size:clamp(1.9rem,7vw,3rem);font-weight:1000;line-height:1.03;margin:7px 0 14px;text-shadow:0 3px 0 #12051e}.ad-photo{display:block;max-width:100%;height:min(54vh,530px);object-fit:contain;margin:auto;border:5px solid #ffcf37;border-radius:18px;background:#fff4cf;padding:5px}.ad-bottom{display:flex;justify-content:center;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}.ad-count{color:#ffe66d;font-size:.88rem;font-weight:850}.particle-layer{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:5}.particle{position:absolute;width:8px;height:8px;border-radius:2px;pointer-events:none;will-change:transform,opacity;animation:particleFly .62s cubic-bezier(.12,.65,.35,1) forwards;box-shadow:0 0 5px #fff8}@keyframes particleFly{0%{transform:translate(0,0) rotate(0) scale(1);opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.15);opacity:0}}.lightning-bolt{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:9;overflow:visible;animation:boltFlash .58s ease-out forwards;filter:drop-shadow(0 0 7px #7df7ff) drop-shadow(0 0 15px #fff)}.lightning-bolt path{fill:none;stroke:#fff;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}.lightning-bolt .glow{stroke:#42dcff;stroke-width:17;opacity:.8}.lightning-bolt .branch{stroke:#fff6a8;stroke-width:4}@keyframes boltFlash{0%{opacity:0}8%,28%{opacity:1}40%{opacity:.25}55%{opacity:1}100%{opacity:0}}
+.hidden{display:none!important}.modal-title{font-size:clamp(1.7rem,5vw,2.5rem);color:#4c1a75;margin:0}.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.footer{text-align:center;color:#d6c6e7;font-size:.8rem;padding:20px}
+@media(min-width:1100px){#game .board-wrap{padding:14px}.cell{border-radius:12px}}
+@media(max-width:700px){.wrap{padding:8px}.game-layout{grid-template-columns:1fr}.side{grid-template-columns:repeat(3,minmax(0,1fr));order:-1}.stat{padding:8px 4px}.stat strong{font-size:1.25rem}.stat small{font-size:.68rem}.board-wrap{padding:6px;border-width:3px}.board{gap:3px}.cell{border-radius:7px}.hint{grid-column:1/-1;text-align:center}.game-actions{display:flex;gap:8px}.game-actions button{flex:1;min-height:52px;padding:10px 8px}.panel{margin-top:12px}}
 
 /* Animaciones añadidas */
 @keyframes tileAppear{0%{opacity:1;transform:scale(.94) translateY(-5px)}70%{opacity:1;transform:scale(1.025) translateY(1px)}100%{opacity:1;transform:scale(1) translateY(0)}}
@@ -71,48 +73,92 @@ button{font:inherit;font-weight:850;border:0;cursor:pointer;touch-action:manipul
 .message{color:#ffe66d!important;text-shadow:0 1px 0 #12051e}
 #resultDetails{white-space:pre-line;font-size:1.15rem}
 @media(prefers-reduced-motion:reduce){.board-wrap.shake{animation:none}.tile.mag{animation:none}}
+
+/* Ajuste móvil: tablero compacto, centrado y sin desbordarse */
+@media(max-width:700px){
+  body{min-width:0;overflow-x:hidden}
+  .wrap{width:100%;max-width:100%;padding:6px}
+  .top{gap:6px;justify-content:center}
+  .brand{width:100%;text-align:center;font-size:clamp(1.15rem,5vw,1.55rem);line-height:1.1}
+  .top>div:last-child{justify-content:center;gap:5px!important}
+  .pill{font-size:.72rem;padding:6px 9px;border-width:1px}
+  #game.panel{padding:9px;margin-top:8px;border-width:3px;border-radius:17px}
+  .game-layout{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%}
+  .game-layout>.board-wrap{width:min(100%, calc(100vw - 30px), 43vh);max-width:100%;padding:5px;border-width:3px;border-radius:15px;margin-inline:auto}
+  .game-layout .board{width:100%;height:auto;aspect-ratio:1;gap:2px}
+  .cell{border-radius:5px;padding:0}
+  .side{width:100%;grid-template-columns:repeat(3,minmax(0,1fr));order:-1;gap:5px}
+  .stat{padding:5px 2px;border-width:2px;border-radius:10px}
+  .stat strong{font-size:1.05rem;line-height:1.1}
+  .stat small{font-size:.58rem;letter-spacing:0}
+  .hint{font-size:.76rem;line-height:1.25;margin:2px 0}
+  .message{font-size:.8rem;min-height:18px}
+  .game-actions{gap:6px}
+  .game-actions button{min-height:42px;padding:7px 5px;font-size:.85rem;border-radius:12px}
+  .panel{padding:12px;border-radius:18px}
+  .footer{padding:10px 4px;font-size:.7rem}
+}
+@media(max-width:380px){
+  .game-layout>.board-wrap{width:min(100%, calc(100vw - 24px), 40vh)}
+  .pill{font-size:.67rem;padding:5px 7px}
+  .stat small{font-size:.53rem}
+}
+@media(max-height:650px) and (max-width:900px){
+  .game-layout>.board-wrap{width:min(100%, calc(100vw - 24px), 58vh)}
+  .wrap{padding:4px}
+  #game.panel{padding:6px;margin-top:5px}
+  .game-layout{gap:5px}
+}
+
+
+/* Texto de impacto al combinar tres o más Magdalenas */
+.mag-shout{position:absolute;left:50%;top:42%;z-index:20;pointer-events:none;white-space:nowrap;font-family:Impact,Haettenschweiler,'Arial Black',sans-serif;font-size:clamp(25px,7vw,62px);font-weight:1000;letter-spacing:1.5px;color:#fff8a6;-webkit-text-stroke:1.5px #7c1aab;text-shadow:0 3px 0 #ff4c91,0 6px 0 #7c1aab,0 0 12px #fff,0 0 26px #ffd43b;transform:translate(-50%,-50%) scale(.1) rotate(-8deg);animation:magShout .95s cubic-bezier(.16,1.4,.35,1) forwards}
+.mag-shout span{display:block;font-size:.35em;letter-spacing:3px;color:white;-webkit-text-stroke:.5px #8a248e;text-align:center;margin-top:-2px}
+@keyframes magShout{0%{opacity:0;transform:translate(-50%,-50%) scale(.1) rotate(-12deg)}22%{opacity:1;transform:translate(-50%,-50%) scale(1.18) rotate(4deg)}38%{transform:translate(-50%,-50%) scale(.94) rotate(-2deg)}52%{transform:translate(-50%,-50%) scale(1.04) rotate(1deg)}78%{opacity:1;transform:translate(-50%,-58%) scale(1) rotate(0)}100%{opacity:0;transform:translate(-50%,-85%) scale(.82) rotate(0)}}
+
 </style>
 </head>
 <body>
 <div class="wrap">
- <header class="top"><div class="brand">MAGDALENA <span>MATCH-3</span> 🍬</div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><div class="pill">🌴 MIAMI EDITION</div><button id="soundToggle" class="pill" type="button" aria-pressed="true" title="Activar o desactivar sonidos">🔊 Sonido</button><button id="musicToggle" class="pill" type="button" aria-pressed="false" title="Activar o desactivar música suave">🎵 Música: OFF</button></div></header>
+ <header class="top"><div class="brand">MAGDALENA <span>MATCH-3</span> 🍬</div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><div class="pill">🌴 MIAMI EDITION</div><button id="fullscreenToggle" class="pill" type="button" title="Pantalla completa" aria-pressed="false">⛶ Pantalla completa</button><button id="langToggle" class="pill" type="button" title="Language / Idioma">🌐 ES</button><button id="soundToggle" class="pill" type="button" aria-pressed="true" data-i18n-title="soundTitle"></button><button id="musicToggle" class="pill" type="button" aria-pressed="false" data-i18n-title="musicTitle"></button></div></header>
  <section id="home" class="panel hero">
-  <div style="font-weight:900;color:#d14b84;letter-spacing:.12em">¡LISTO PARA JUGAR!</div>
-  <h1>¡Dientes al<br>ataque!</h1>
-  <p>Intercambia dientes vecinos y forma grupos de 3 o más del mismo color. ¡No hay espera inicial! ¡Cuando Magdalena aparece en el tablero, combínala: explota en grande y da <b>puntos extra</b>! Encadena combos para multiplicar tus puntos.</p>
-  <button class="btn" id="playBtn">▶ JUGAR AHORA</button>
-  <h2 style="margin:25px 0 8px;color:#4c1a75">Elige un nivel</h2>
-  <div class="collectible-row"><div class="comb-card"><span class="comb-icon" id="combIcon">💛</span><div><b>PEINETA GLOBAL</b><small id="combProgress">0 / 5 fragmentos</small></div></div><div class="podium-card"><div class="podium-title">🏆 PODIO DE MAGDALENA</div><div class="podium-stage"><div class="podium-empty" id="podiumEmpty">?</div><img id="podiumHead" class="podium-head hidden" alt="Cabeza de Magdalena" /></div><small id="podiumStatus">Consigue 5 peinetas para desbloquearla</small></div></div><h2 style="margin:25px 0 8px;color:#4c1a75">Elige un nivel</h2><div class="levelgrid" id="levelGrid"></div>
+  <div style="font-weight:900;color:#d14b84;letter-spacing:.12em" data-i18n="ready"></div>
+  <h1 data-i18n-html="heroTitle"></h1>
+  <p data-i18n-html="heroDesc"></p>
+  <button class="btn" id="playBtn" data-i18n="play"></button>
+  <div class="collectible-row"><div class="comb-card"><span class="comb-icon" id="combIcon"></span><div><b data-i18n="combTitle"></b><small id="combProgress"></small></div></div><div class="podium-card"><div class="podium-title" data-i18n="podiumTitle"></div><div class="podium-stage"><div class="podium-empty" id="podiumEmpty">?</div><img id="podiumHead" class="podium-head hidden" alt="" data-i18n-alt="headAlt" /></div><small id="podiumStatus"></small></div></div>
+  <h2 style="margin:25px 0 8px;color:#4c1a75" data-i18n="chooseLevel"></h2>
+  <div class="levelgrid" id="levelGrid"></div>
  </section>
  <section id="game" class="hidden">
-  <div class="top" style="margin:14px 0"><div><div class="pill" id="levelLabel">NIVEL 1 · SOUTH BEACH</div></div><button class="btn dark" id="mapBtn">☰ NIVELES</button></div>
+  <div class="top" style="margin:14px 0"><div><div class="pill" id="levelLabel"></div></div><button class="btn dark" id="mapBtn" data-i18n="menuLevels"></button></div>
   <div class="game-layout">
-   <div class="board-wrap"><div class="board" id="board" aria-label="Tablero de juego"></div><div class="particle-layer" id="particleLayer" aria-hidden="true"></div></div>
+   <div class="board-wrap"><div class="board" id="board" data-i18n-aria="boardAria"></div><div class="particle-layer" id="particleLayer" aria-hidden="true"></div></div>
    <aside class="side">
-    <div class="stat"><small>Puntuación</small><strong id="score">0</strong></div>
-    <div class="stat"><small>Movimientos</small><strong id="moves">16</strong></div>
-    <div class="stat"><small>Objetivo</small><strong id="target">1450</strong></div>
-    <div class="stat" id="collectStat"><small>Recolectar</small><strong id="collect">—</strong></div>
-    <div class="hint" id="hint">Selecciona un diente y luego uno vecino para intercambiarlos. Solo cuentan las combinaciones que hagas manualmente.</div>
+    <div class="stat"><small data-i18n="score"></small><strong id="score">0</strong></div>
+    <div class="stat"><small data-i18n="moves"></small><strong id="moves">16</strong></div>
+    <div class="stat"><small data-i18n="target"></small><strong id="target">1450</strong></div>
+    <div class="stat" id="collectStat"><small data-i18n="collectDefault"></small><strong id="collect">—</strong></div>
+    <div class="hint" id="hint" data-i18n="hintDefault"></div>
     <div class="message" id="message" aria-live="polite"></div>
-    <div class="game-actions"><button class="btn dark" id="restartBtn">↻ REINICIAR</button><button class="btn secondary" id="shuffleBtn">⤨ MEZCLAR</button></div>
+    <div class="game-actions"><button class="btn dark" id="restartBtn" data-i18n="restart"></button><button class="btn secondary" id="shuffleBtn" data-i18n="shuffle"></button></div>
    </aside>
   </div>
  </section>
- <div class="footer">Magdalena Match-3 — Miami · Juego HTML</div>
+ <div class="footer" data-i18n="footer"></div>
 </div>
 <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
  <div class="ad-card" id="adCard">
-  <div style="font-weight:1000;letter-spacing:.18em;color:#ffe66d">✦ ANUNCIO ✦</div>
-  <div class="slogan">Magdalena te lo dijo</div>
-  <img class="ad-photo" id="adPhoto" alt="Fotografía original del anuncio">
-  <div class="ad-bottom"><button class="btn" id="skipAd">➜ SALTAR ANUNCIO</button><div class="ad-count" id="adCount">CONTINUAMOS EN 5 SEGUNDOS</div></div>
+  <div style="font-weight:1000;letter-spacing:.18em;color:#ffe66d" data-i18n="adTag"></div>
+  <div class="slogan" data-i18n="adSlogan"></div>
+  <img class="ad-photo" id="adPhoto" alt="" data-i18n-alt="adAlt">
+  <div class="ad-bottom"><button class="btn" id="skipAd" data-i18n="skipAd"></button><div class="ad-count" id="adCount"></div></div>
  </div>
 </div>
 <div id="resultOverlay" class="overlay hidden">
  <div class="panel hero" style="width:min(550px,100%);margin:0">
-  <h2 class="modal-title" id="resultTitle">¡NIVEL COMPLETADO!</h2><p id="resultDetails"></p>
-  <div class="row"><button class="btn" id="nextBtn">SIGUIENTE NIVEL ➜</button><button class="btn dark" id="retryBtn">↻ REINTENTAR</button><button class="btn secondary" id="resultMapBtn">NIVELES</button></div>
+  <h2 class="modal-title" id="resultTitle" data-i18n="won"></h2><p id="resultDetails"></p>
+  <div class="row"><button class="btn" id="nextBtn" data-i18n="next"></button><button class="btn dark" id="retryBtn" data-i18n="retry"></button><button class="btn secondary" id="resultMapBtn" data-i18n="levels"></button></div>
  </div>
 </div>
 <script>
@@ -169,23 +215,59 @@ const LEVELS = [
  ];
  LEVELS.forEach((cfg,i)=>{cfg.blocked=[];const shape=layouts[i%layouts.length];for(let y=0;y<8;y++)for(let x=0;x<8;x++)if(shape(x,y))cfg.blocked.push([x,y]);});
 })();
+// ===== Idiomas: español (es) e inglés (en) =====
+let lang='es';
+try{const saved=localStorage.getItem('magdalenaLang');if(saved==='en'||saved==='es')lang=saved}catch(e){}
+const I18N={
+ es:{sound:"🔊 Sonido",silence:"🔇 Silencio",musicOn:"🎵 Música: ON",musicOff:"🎵 Música: OFF",soundTitle:"Activar o desactivar sonidos",musicTitle:"Activar o desactivar música suave",
+ ready:"¡LISTO PARA JUGAR!",heroTitle:"¡Dientes al<br>ataque!",heroDesc:"Intercambia dientes vecinos y forma grupos de 3 o más del mismo color. ¡No hay espera inicial! ¡Cuando Magdalena aparece en el tablero, combínala: explota en grande y da <b>puntos extra</b>! Encadena combos para multiplicar tus puntos.",
+ play:"▶ JUGAR AHORA",chooseLevel:"Elige un nivel",combTitle:"PEINETA GLOBAL",combs:"{n} / 5 peinetas",combAlt:"Peineta dorada",podiumTitle:"🏆 PODIO DE MAGDALENA",locked:"Consigue 5 peinetas para desbloquearla",unlocked:"¡Magdalena desbloqueada!",headAlt:"Cabeza de Magdalena",
+ menuLevels:"☰ NIVELES",levels:"NIVELES",score:"Puntuación",moves:"Movimientos",target:"Objetivo",collectDefault:"Recolectar",extraGoal:"Objetivo extra",
+ hintDefault:"Selecciona un diente y luego uno vecino para intercambiarlos. Solo cuentan las combinaciones que hagas manualmente.",restart:"↻ REINICIAR",shuffle:"⤨ MEZCLAR",footer:"Magdalena Match-3 — Miami · Juego HTML",boardAria:"Tablero de juego",
+ adTag:"✦ ANUNCIO ✦",adSlogan:"Magdalena te lo dijo",adAlt:"Fotografía original del anuncio",skipAd:"➜ SALTAR ANUNCIO",adCount:"CONTINUAMOS EN {n} SEGUNDOS",
+ won:"¡NIVEL COMPLETADO!",lost:"¡CASI LO LOGRAS!",next:"SIGUIENTE NIVEL ➜",retry:"↻ REINTENTAR",scoreLine:"Puntuación: {score} · {name}",lostLine:"Puntuación: {score}. Te quedaste sin movimientos.",
+ level:"NIVEL",letsGo:"¡A jugar! Intercambia dientes vecinos.",noMatch:"¡Ese intercambio no forma una combinación!",reshuffled:"¡Tablero mezclado! Sigue buscando.",shuffled:"Tablero mezclado. ¡Busca una combinación!",
+ goodMsg:"¡Bien! +{pts} puntos",magMsg:"💛 ¡MAGDALENA! +{pts} puntos",combo:"combo",magPop:"★ ¡MAGDALENA! ★",blockedCell:"Casilla bloqueada",piece:"Pieza",special:"especiales",
+ collectVerb:"Recolecta",noExtra:"Sin recolección extra",movesWord:"movimientos",pointsWord:"puntos",magPlural:"Magdalenas",teethOf:"dientes {color}",collectMagLabel:"Recolectar Magdalenas",collectTeethLabel:"Recolectar dientes {color}",
+ goalOnly:"Objetivo: consigue {target} puntos.",goalFull:"Objetivo: consigue {target} puntos Y recolecta {n} {what}. Solo cuentan los que elimines en combinaciones. Magdalena vale {pts} puntos por ficha.",
+ colors:{red:"rojo",blue:"azul",green:"verde",gold:"dorado",yellow:"amarillo",magdalena:"Magdalena"}},
+ en:{sound:"🔊 Sound",silence:"🔇 Muted",musicOn:"🎵 Music: ON",musicOff:"🎵 Music: OFF",soundTitle:"Turn sounds on or off",musicTitle:"Turn soft music on or off",
+ ready:"READY TO PLAY!",heroTitle:"Teeth<br>attack!",heroDesc:"Swap neighboring teeth and make groups of 3 or more of the same color. No waiting at the start! When Magdalena appears on the board, match her: she explodes big and gives <b>bonus points</b>! Chain combos to multiply your points.",
+ play:"▶ PLAY NOW",chooseLevel:"Choose a level",combTitle:"GLOBAL COMB",combs:"{n} / 5 combs",combAlt:"Golden comb",podiumTitle:"🏆 MAGDALENA'S PODIUM",locked:"Collect 5 combs to unlock her",unlocked:"Magdalena unlocked!",headAlt:"Magdalena's head",
+ menuLevels:"☰ LEVELS",levels:"LEVELS",score:"Score",moves:"Moves",target:"Target",collectDefault:"Collect",extraGoal:"Extra goal",
+ hintDefault:"Select a tooth, then a neighbor to swap them. Only combos you make manually count.",restart:"↻ RESTART",shuffle:"⤨ SHUFFLE",footer:"Magdalena Match-3 — Miami · HTML game",boardAria:"Game board",
+ adTag:"✦ AD ✦",adSlogan:"Magdalena told you so",adAlt:"Original ad photo",skipAd:"➜ SKIP AD",adCount:"CONTINUING IN {n} SECONDS",
+ won:"LEVEL COMPLETE!",lost:"SO CLOSE!",next:"NEXT LEVEL ➜",retry:"↻ RETRY",scoreLine:"Score: {score} · {name}",lostLine:"Score: {score}. You ran out of moves.",
+ level:"LEVEL",letsGo:"Let's go! Swap neighboring teeth.",noMatch:"That swap doesn't make a match!",reshuffled:"Board reshuffled! Keep looking.",shuffled:"Board shuffled. Find a match!",
+ goodMsg:"Nice! +{pts} points",magMsg:"💛 MAGDALENA! +{pts} points",combo:"combo",magPop:"★ MAGDALENA! ★",blockedCell:"Blocked cell",piece:"Piece",special:"special",
+ collectVerb:"Collect",noExtra:"No extra goal",movesWord:"moves",pointsWord:"points",magPlural:"Magdalenas",teethOf:"{color} teeth",collectMagLabel:"Collect Magdalenas",collectTeethLabel:"Collect {color} teeth",
+ goalOnly:"Goal: reach {target} points.",goalFull:"Goal: reach {target} points AND collect {n} {what}. Only pieces you clear in combos count. Magdalena is worth {pts} points each.",
+ colors:{red:"red",blue:"blue",green:"green",gold:"gold",yellow:"yellow",magdalena:"Magdalena"}}
+};
+function t(k,v){let s=(I18N[lang]&&I18N[lang][k]!==undefined)?I18N[lang][k]:(I18N.es[k]!==undefined?I18N.es[k]:k);if(v)for(const key in v)s=s.split("{"+key+"}").join(v[key]);return s}
+function labelOf(c){return (I18N[lang].colors[c])||""}
+function collectWhat(c){return c===6?t("magPlural"):t("teethOf",{color:labelOf(COLORS[c-1])||t("special")})}
+function collectLabel(c){return c===6?t("collectMagLabel"):t("collectTeethLabel",{color:labelOf(COLORS[c-1])||t("special")})}
 const COLORS = ["red","blue","green","gold","yellow","magdalena"];
-const LABELS = {red:"rojo",blue:"azul",green:"verde",gold:"dorado",yellow:"amarillo",magdalena:"Magdalena"};
 const $ = id => document.getElementById(id);
 // Efectos de sonido generados localmente con Web Audio (sin archivos externos).
 let soundEnabled=true, audioCtx=null;
 function audioReady(){if(!soundEnabled)return null;try{if(!audioCtx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;audioCtx=new AC()}if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch(e){return null}}
 function tone(freq,duration=.09,wave='sine',volume=.04,delay=0){const ctx=audioReady();if(!ctx)return;const t=ctx.currentTime+delay,osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=wave;osc.frequency.setValueAtTime(freq,t);gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(volume,t+.012);gain.gain.exponentialRampToValueAtTime(.0001,t+duration);osc.connect(gain);gain.connect(ctx.destination);osc.start(t);osc.stop(t+duration+.02)}
-function sfx(name){if(!soundEnabled)return;switch(name){case 'grab':tone(520,.055,'triangle',.025);break;case 'select':tone(440,.06,'sine',.025);tone(620,.07,'sine',.022,.045);break;case 'swap':tone(360,.07,'triangle',.035);tone(500,.09,'triangle',.03,.055);break;case 'invalid':tone(210,.12,'square',.018);tone(170,.14,'square',.014,.09);break;case 'match':tone(520,.1,'sine',.04);tone(660,.11,'sine',.04,.06);tone(790,.15,'triangle',.045,.12);break;case 'drop':tone(390,.06,'triangle',.018);break;case 'cascade':tone(660,.08,'sine',.035);tone(880,.12,'triangle',.04,.07);break;case 'boom':tone(130,.28,'sawtooth',.05);tone(75,.34,'sine',.07,.02);[784,988,1318,1760].forEach((f,i)=>tone(f,.16,'triangle',.04,.05+i*.06));break;case 'combo':tone(700,.07,'triangle',.035);tone(930,.1,'triangle',.04,.06);break;case 'peineta':tone(660,.12,'sine',.04);tone(880,.14,'sine',.04,.1);tone(1100,.22,'triangle',.045,.2);break;case 'win':[523,659,784,1047].forEach((f,i)=>tone(f,.2,'sine',.04,i*.11));break;case 'lose':tone(392,.18,'triangle',.03);tone(330,.22,'triangle',.03,.16);tone(262,.3,'sine',.03,.32);break;case 'shuffle':tone(330,.06,'triangle',.025);tone(440,.06,'triangle',.025,.06);tone(550,.08,'triangle',.025,.12);break}}
-const soundBtn=document.getElementById('soundToggle');if(soundBtn)soundBtn.addEventListener('click',()=>{soundEnabled=!soundEnabled;soundBtn.textContent=soundEnabled?'🔊 Sonido':'🔇 Silencio';soundBtn.setAttribute('aria-pressed',String(soundEnabled));if(soundEnabled){audioReady();sfx('select')}})
+function sfx(name){if(!soundEnabled)return;switch(name){case 'grab':tone(520,.055,'triangle',.025);break;case 'select':tone(440,.06,'sine',.025);tone(620,.07,'sine',.022,.045);break;case 'swap':tone(360,.07,'triangle',.035);tone(500,.09,'triangle',.03,.055);break;case 'invalid':tone(210,.12,'square',.018);tone(170,.14,'square',.014,.09);break;case 'match':tone(520,.1,'sine',.04);tone(660,.11,'sine',.04,.06);tone(790,.15,'triangle',.045,.12);break;case 'drop':tone(390,.06,'triangle',.018);break;case 'cascade':tone(660,.08,'sine',.035);tone(880,.12,'triangle',.04,.07);break;case 'lightning':tone(1250,.07,'sawtooth',.055);tone(180,.25,'sawtooth',.065,.045);tone(820,.12,'triangle',.05,.08);break;case 'boom':tone(130,.28,'sawtooth',.05);tone(75,.34,'sine',.07,.02);[784,988,1318,1760].forEach((f,i)=>tone(f,.16,'triangle',.04,.05+i*.06));break;case 'combo':tone(700,.07,'triangle',.035);tone(930,.1,'triangle',.04,.06);break;case 'peineta':tone(660,.12,'sine',.04);tone(880,.14,'sine',.04,.1);tone(1100,.22,'triangle',.045,.2);break;case 'win':[523,659,784,1047].forEach((f,i)=>tone(f,.2,'sine',.04,i*.11));break;case 'lose':tone(392,.18,'triangle',.03);tone(330,.22,'triangle',.03,.16);tone(262,.3,'sine',.03,.32);break;case 'shuffle':tone(330,.06,'triangle',.025);tone(440,.06,'triangle',.025,.06);tone(550,.08,'triangle',.025,.12);break}}
+const soundBtn=document.getElementById('soundToggle');if(soundBtn)soundBtn.addEventListener('click',()=>{soundEnabled=!soundEnabled;soundBtn.textContent=soundEnabled?t('sound'):t('silence');soundBtn.setAttribute('aria-pressed',String(soundEnabled));if(soundEnabled){audioReady();sfx('select')}})
 // Música ambiental suave generada en el navegador; no necesita archivos externos.
 let musicEnabled=false, musicTimer=null, musicStep=0, musicGain=null;
-const chillChords=[[261.63,329.63,392.00],[220.00,261.63,329.63],[174.61,220.00,261.63],[196.00,246.94,293.66]];
+const chillChords=[[261.63,329.63,392.00],[293.66,369.99,440.00],[220.00,261.63,329.63],[246.94,311.13,369.99]];
+const candyMelodies=[[523.25,659.25,783.99,659.25,587.33,659.25,783.99,987.77],[587.33,739.99,880,739.99,659.25,739.99,880,1174.66],[440,523.25,659.25,783.99,659.25,523.25,587.33,659.25],[493.88,587.33,739.99,880,739.99,587.33,659.25,739.99]];
 function playMusicNote(freq,when,duration,volume){const ctx=audioReady();if(!ctx)return;const osc=ctx.createOscillator(),gain=ctx.createGain(),filter=ctx.createBiquadFilter();osc.type='sine';osc.frequency.setValueAtTime(freq,when);filter.type='lowpass';filter.frequency.value=900;gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(volume,when+.8);gain.gain.setTargetAtTime(.0001,when+duration*.55,duration*.2);osc.connect(filter);filter.connect(gain);gain.connect(musicGain||ctx.destination);osc.start(when);osc.stop(when+duration+1)}
-function musicBar(){if(!musicEnabled||!audioCtx)return;const ctx=audioReady();if(!ctx)return;const now=ctx.currentTime+.15,chord=chillChords[musicStep%chillChords.length];chord.forEach((f,i)=>playMusicNote(f,now+i*.08,5.2,.012));const melody=[chord[2]*2,chord[1]*2,chord[0]*2,chord[1]*2];melody.forEach((f,i)=>playMusicNote(f,now+1.2+i*1.05,1.7,.009));musicStep++}
-function startMusic(){if(musicEnabled)return;const ctx=audioReady();if(!ctx)return;musicEnabled=true;musicGain=ctx.createGain();musicGain.gain.value=.52;musicGain.connect(ctx.destination);musicBar();musicTimer=setInterval(musicBar,5200);const b=document.getElementById('musicToggle');b.textContent='🎵 Música: ON';b.setAttribute('aria-pressed','true')}
-function stopMusic(){musicEnabled=false;if(musicTimer){clearInterval(musicTimer);musicTimer=null}if(musicGain){try{musicGain.gain.setTargetAtTime(.0001,audioCtx.currentTime,.08);musicGain.disconnect()}catch(e){}musicGain=null}const b=document.getElementById('musicToggle');b.textContent='🎵 Música: OFF';b.setAttribute('aria-pressed','false')}
+function musicBar(){if(!musicEnabled||!audioCtx)return;const ctx=audioReady();if(!ctx)return;const now=ctx.currentTime+.12,step=musicStep%chillChords.length,chord=chillChords[step],melody=candyMelodies[step];chord.forEach((f,i)=>playMusicNote(f,now+i*.035,4.7,.014));playMusicNote(chord[0]/2,now,3.8,.022);melody.forEach((f,i)=>playMusicNote(f,now+i*.48,.42,i%2?.016:.022));for(let i=0;i<4;i++)playMusicNote(chord[(i+1)%3]*2,now+i*.96+.24,.18,.009);musicStep++}
+function startMusic(){if(musicEnabled)return;const ctx=audioReady();if(!ctx)return;musicEnabled=true;musicGain=ctx.createGain();musicGain.gain.value=.52;musicGain.connect(ctx.destination);musicBar();musicTimer=setInterval(musicBar,3900);const b=document.getElementById('musicToggle');b.textContent=t('musicOn');b.setAttribute('aria-pressed','true')}
+function stopMusic(){musicEnabled=false;if(musicTimer){clearInterval(musicTimer);musicTimer=null}if(musicGain){try{musicGain.gain.setTargetAtTime(.0001,audioCtx.currentTime,.08);musicGain.disconnect()}catch(e){}musicGain=null}const b=document.getElementById('musicToggle');b.textContent=t('musicOff');b.setAttribute('aria-pressed','false')}
 document.getElementById('musicToggle').addEventListener('click',()=>{if(musicEnabled)stopMusic();else startMusic()});
+const fullscreenBtn=document.getElementById('fullscreenToggle');
+async function toggleFullscreen(){try{if(!document.fullscreenElement){await document.documentElement.requestFullscreen();fullscreenBtn.textContent='⛶ Salir de pantalla completa';fullscreenBtn.setAttribute('aria-pressed','true')}else{await document.exitFullscreen();}}catch(e){fullscreenBtn.textContent='Pantalla completa no disponible';setTimeout(()=>fullscreenBtn.textContent=document.fullscreenElement?'⛶ Salir de pantalla completa':'⛶ Pantalla completa',1800)}}
+fullscreenBtn.addEventListener('click',toggleFullscreen);document.addEventListener('fullscreenchange',()=>{const on=!!document.fullscreenElement;fullscreenBtn.textContent=on?'⛶ Salir de pantalla completa':'⛶ Pantalla completa';fullscreenBtn.setAttribute('aria-pressed',String(on));setTimeout(()=>window.dispatchEvent(new Event('resize')),120)});
 let levelIndex=0, grid=[], selected=null, score=0, moves=0, collected=0, busy=false, adTimer=null, unlocked=1;
 const size=8;
 function randomType(){const n=LEVELS[levelIndex].types;if(n<6&&Math.random()<.09)return 6;return Math.floor(Math.random()*Math.min(n,6))+1}
@@ -193,7 +275,7 @@ function blocked(x,y){return LEVELS[levelIndex].blocked.some(p=>p[0]===x&&p[1]==
 function isBlockedIndex(i){return blocked(i%size,Math.floor(i/size))}
 function makeImg(type){if(type===6)return MAG_IMG;let keys=["","red","blue","green","gold","yellow","magdalena"];return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(TEETH[keys[type]||"red"])}
 let globalPeineta=0;try{globalPeineta=Math.max(0,Math.min(5,Number(localStorage.getItem("magdalenaGlobalPeineta")||0)))}catch(e){}
-function renderCollectibles(){const p=$("combProgress"),empty=$("podiumEmpty"),head=$("podiumHead");if(!p)return;p.textContent=`${globalPeineta} / 5 peinetas`;$("combIcon").innerHTML=`<img alt="Peineta dorada" style="width:48px;height:48px;object-fit:contain" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(TEETH.peineta)}">`;const unlocked=globalPeineta>=5;empty.classList.toggle("hidden",unlocked);head.classList.toggle("hidden",!unlocked);if(unlocked)head.src=MAG_IMG;$("podiumStatus").textContent=unlocked?"¡Magdalena desbloqueada!":"Consigue 5 peinetas para desbloquearla"}
+function renderCollectibles(){const p=$("combProgress"),empty=$("podiumEmpty"),head=$("podiumHead");if(!p)return;p.textContent=t("combs",{n:globalPeineta});$("combIcon").innerHTML=`<img alt="${t('combAlt')}" style="width:48px;height:48px;object-fit:contain" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(TEETH.peineta)}">`;const unlocked=globalPeineta>=5;empty.classList.toggle("hidden",unlocked);head.classList.toggle("hidden",!unlocked);if(unlocked)head.src=MAG_IMG;$("podiumStatus").textContent=unlocked?t('unlocked'):t('locked')}
 function awardPeineta(){if(globalPeineta>=5)return;globalPeineta++;sfx("peineta");try{localStorage.setItem("magdalenaGlobalPeineta",String(globalPeineta))}catch(e){}renderCollectibles();}
 function wouldMatch(x,y,t){return (x>=2&&grid[y][x-1]===t&&grid[y][x-2]===t)||(y>=2&&grid[y-1]&&grid[y-1][x]===t&&grid[y-2]&&grid[y-2][x]===t)}
 function hasAnyMove(){for(let y=0;y<size;y++)for(let x=0;x<size;x++){if(blocked(x,y)||grid[y][x]===0)continue;for(const [dx,dy] of [[1,0],[0,1]]){let nx=x+dx,ny=y+dy;if(nx>=size||ny>=size||blocked(nx,ny)||grid[ny][nx]===0)continue;[grid[y][x],grid[ny][nx]]=[grid[ny][nx],grid[y][x]];let yes=findMatches().length>0;[grid[y][x],grid[ny][nx]]=[grid[ny][nx],grid[y][x]];if(yes)return true}}return false}
@@ -202,7 +284,7 @@ function newBoard(){const cfg=LEVELS[levelIndex];grid=Array.from({length:size},(
 }
 function findMatches(){let set=new Set();for(let y=0;y<size;y++){let x=0;while(x<size){let t=grid[y][x],end=x+1;if(!t||blocked(x,y)){x++;continue}while(end<size&&!blocked(end,y)&&grid[y][end]===t)end++;if(end-x>=3)for(let k=x;k<end;k++)set.add(y*size+k);x=end}}
 for(let x=0;x<size;x++){let y=0;while(y<size){let t=grid[y][x],end=y+1;if(!t||blocked(x,y)){y++;continue}while(end<size&&!blocked(x,end)&&grid[end][x]===t)end++;if(end-y>=3)for(let k=y;k<end;k++)set.add(k*size+x);y=end}}return [...set]}
-function render(){const board=$("board");board.innerHTML="";for(let y=0;y<size;y++)for(let x=0;x<size;x++){let c=document.createElement("button");c.className="cell"+(blocked(x,y)?" blocked":"")+(selected&&selected.x===x&&selected.y===y?" selected":"");c.setAttribute("aria-label",blocked(x,y)?"Casilla bloqueada":`Pieza ${grid[y][x]===6?"Magdalena":(LABELS[COLORS[grid[y][x]-1]]||"")}`);if(!blocked(x,y)){let im=document.createElement("img");im.className="tile"+(grid[y][x]===6?" mag":"");im.draggable=false;im.src=makeImg(grid[y][x]);im.alt="";im.style.animationDelay=((x*31+y*17)%130)+"ms";c.dataset.x=x;c.dataset.y=y;c.appendChild(im);c.addEventListener("click",()=>{if(Date.now()<(window.dragHandledUntil||0))return;pick(x,y)});}board.appendChild(c)}$("score").textContent=score;$("moves").textContent=moves;$("target").textContent=LEVELS[levelIndex].target;$("levelLabel").textContent=`NIVEL ${levelIndex+1} · ${LEVELS[levelIndex].name.toUpperCase()}`;const cfg=LEVELS[levelIndex];$("collectStat").classList.toggle("hidden",cfg.collect<0);$("collectStat").querySelector("small").textContent=cfg.collect<0?"Objetivo extra":(cfg.collect===6?"Recolectar Magdalenas":"Recolectar dientes "+(LABELS[COLORS[cfg.collect-1]]||"especiales"));$("collect").textContent=cfg.collect<0?"—":`${collected}/${cfg.collectTarget}`;$("hint").textContent=cfg.collect<0?`Objetivo: consigue ${cfg.target} puntos.`:`Objetivo: consigue ${cfg.target} puntos Y recolecta ${cfg.collectTarget} ${cfg.collect===6?"Magdalenas":"dientes "+(LABELS[COLORS[cfg.collect-1]]||"especiales")}. Solo cuentan los que elimines en combinaciones. Magdalena vale ${MAG_POINTS} puntos por ficha.`;}
+function render(){const board=$("board");board.innerHTML="";for(let y=0;y<size;y++)for(let x=0;x<size;x++){let c=document.createElement("button");c.className="cell"+(blocked(x,y)?" blocked":"")+(selected&&selected.x===x&&selected.y===y?" selected":"");c.setAttribute("aria-label",blocked(x,y)?t('blockedCell'):`${t('piece')} ${grid[y][x]===6?"Magdalena":(labelOf(COLORS[grid[y][x]-1])||"")}`);if(!blocked(x,y)){let im=document.createElement("img");im.className="tile"+(grid[y][x]===6?" mag":"");im.draggable=false;im.src=makeImg(grid[y][x]);im.alt="";im.style.animationDelay=((x*31+y*17)%130)+"ms";c.dataset.x=x;c.dataset.y=y;c.appendChild(im);c.addEventListener("click",()=>{if(Date.now()<(window.dragHandledUntil||0))return;pick(x,y)});}board.appendChild(c)}$("score").textContent=score;$("moves").textContent=moves;$("target").textContent=LEVELS[levelIndex].target;$("levelLabel").textContent=`${t('level')} ${levelIndex+1} · ${LEVELS[levelIndex].name.toUpperCase()}`;const cfg=LEVELS[levelIndex];$("collectStat").classList.toggle("hidden",cfg.collect<0);$("collectStat").querySelector("small").textContent=cfg.collect<0?t('extraGoal'):collectLabel(cfg.collect);$("collect").textContent=cfg.collect<0?"—":`${collected}/${cfg.collectTarget}`;$("hint").textContent=cfg.collect<0?t('goalOnly',{target:cfg.target}):t('goalFull',{target:cfg.target,n:cfg.collectTarget,what:collectWhat(cfg.collect),pts:MAG_POINTS});}
 // Permite intercambiar dientes arrastrando con ratón o dedo.
 let dragStart=null, dragMoved=false;
 const dragBoard=$("board");
@@ -212,7 +294,7 @@ dragBoard.addEventListener("pointerdown",e=>{const cell=e.target.closest(".cell:
 dragBoard.addEventListener("pointermove",e=>{if(!dragStart||e.pointerId!==dragStart.pointerId)return;if(dragGhost){dragGhost.style.left=e.clientX+"px";dragGhost.style.top=e.clientY+"px"}const el=document.elementFromPoint(e.clientX,e.clientY)?.closest(".cell");dragBoard.querySelectorAll(".drag-target").forEach(c=>c.classList.remove("drag-target"));if(el&&!el.classList.contains("blocked")){el.classList.add("drag-target");if(el!==dragStart.cell)dragMoved=true}});
 function finishDrag(e){if(!dragStart)return;const start=dragStart;const target=document.elementFromPoint(e.clientX,e.clientY)?.closest(".cell:not(.blocked)");clearDragVisual();dragStart=null;if(target&&target!==start.cell&&Math.abs(+target.dataset.x-start.x)+Math.abs(+target.dataset.y-start.y)===1){window.dragHandledUntil=Date.now()+450;selected={x:start.x,y:start.y};pick(+target.dataset.x,+target.dataset.y);window.dragHandledUntil=Date.now()+450;}else if(dragMoved){window.dragHandledUntil=Date.now()+250;}}
 dragBoard.addEventListener("pointerup",finishDrag);dragBoard.addEventListener("pointercancel",()=>{clearDragVisual();dragStart=null});
-function pick(x,y){if(busy)return;if(!selected){selected={x,y};sfx("select");render();return}if(selected.x===x&&selected.y===y){selected=null;render();return}if(Math.abs(selected.x-x)+Math.abs(selected.y-y)!==1){selected={x,y};sfx("select");render();return}const a=selected;selected=null;[grid[a.y][a.x],grid[y][x]]=[grid[y][x],grid[a.y][a.x]];const matches=findMatches();if(!matches.length){sfx("invalid");[grid[a.y][a.x],grid[y][x]]=[grid[y][x],grid[a.y][a.x]];$("message").textContent="¡Ese intercambio no forma una combinación!";render();return}sfx("swap");moves--;turnGain=0;turnMag=0;resolveMatches(matches,1)}
+function pick(x,y){if(busy)return;if(!selected){selected={x,y};sfx("select");render();return}if(selected.x===x&&selected.y===y){selected=null;render();return}if(Math.abs(selected.x-x)+Math.abs(selected.y-y)!==1){selected={x,y};sfx("select");render();return}const a=selected;selected=null;[grid[a.y][a.x],grid[y][x]]=[grid[y][x],grid[a.y][a.x]];const matches=findMatches();if(!matches.length){sfx("invalid");[grid[a.y][a.x],grid[y][x]]=[grid[y][x],grid[a.y][a.x]];$("message").textContent=t('noMatch');render();return}sfx("swap");moves--;turnGain=0;turnMag=0;resolveMatches(matches,1)}
 const MAG_POINTS=200;
 let turnGain=0,turnMag=0;
 function cellCenter(i){const layer=$("particleLayer"),cell=$("board").children[i];if(!layer||!cell)return null;const w=layer.getBoundingClientRect(),r=cell.getBoundingClientRect();return{x:r.left+r.width/2-w.left,y:r.top+r.height/2-w.top,w:r.width}}
@@ -220,8 +302,17 @@ function scorePopup(indices,gained,combo,isMag){
  const layer=$("particleLayer");if(!layer||!indices.length)return;
  let sx=0,sy=0,n=0;for(const i of indices){const c=cellCenter(i);if(c){sx+=c.x;sy+=c.y;n++}}if(!n)return;
  const p=document.createElement("div");p.className="score-pop"+(isMag?" mag":"")+(combo>1?" combo":"");
- p.innerHTML=`+${gained}`+(isMag?`<small class="gold">★ ¡MAGDALENA! ★</small>`:"")+(combo>1?`<small>COMBO x${combo}</small>`:"");
+ p.innerHTML=`+${gained}`+(isMag?`<small class="gold">${t('magPop')}</small>`:"")+(combo>1?`<small>${t('combo').toUpperCase()} x${combo}</small>`:"");
  p.style.left=(sx/n)+"px";p.style.top=(sy/n)+"px";layer.appendChild(p);p.addEventListener("animationend",()=>p.remove(),{once:true});
+}
+function lightningStrike(indices){
+ const layer=$("particleLayer"),wrap=$("board").parentElement;if(!layer||indices.length<3)return;
+ const pts=indices.map(i=>cellCenter(i)).filter(Boolean);if(pts.length<3)return;
+ const w=layer.clientWidth,h=layer.clientHeight,avgX=pts.reduce((a,p)=>a+p.x,0)/pts.length;
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.setAttribute('preserveAspectRatio','none');svg.classList.add('lightning-bolt');
+ const pathFor=(end,j)=>{let x=avgX+(j-1)*Math.min(35,w*.045),y=0,d=`M ${x} ${y}`;const steps=5;for(let k=1;k<steps;k++){x+=(end.x-x)*(1/ (steps-k+1))+(Math.random()-.5)*Math.min(42,w*.05);y=end.y*k/steps;d+=` L ${x} ${y}`}d+=` L ${end.x} ${end.y}`;return d};
+ pts.slice(0,Math.min(5,pts.length)).forEach((p,j)=>{const d=pathFor(p,j);for(const cls of ['glow','core']){const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',d);if(cls==='glow')path.classList.add('glow');svg.appendChild(path)}});
+ layer.appendChild(svg);svg.addEventListener('animationend',()=>svg.remove(),{once:true});wrap.classList.remove('shake');void wrap.offsetWidth;wrap.classList.add('shake');sfx('lightning');
 }
 function magExplosion(indices){
  const layer=$("particleLayer"),wrap=$("board").parentElement;if(!layer)return;
@@ -240,6 +331,10 @@ function burstParticles(indices){
   for(let n=0;n<7;n++){const p=document.createElement("i");p.className="particle";p.style.left=(cx-4+(Math.random()*8-4))+"px";p.style.top=(cy-4+(Math.random()*8-4))+"px";p.style.background=palette[Math.floor(Math.random()*palette.length)];p.style.setProperty("--dx",(Math.random()*90-45)+"px");p.style.setProperty("--dy",(Math.random()*-85-8)+"px");p.style.setProperty("--rot",(Math.random()*540-270)+"deg");layer.appendChild(p);p.addEventListener("animationend",()=>p.remove(),{once:true});}
  }
 }
+// Voz subida por el usuario: se reproduce cuando se combinan 3+ fichas de Magdalena.
+const magVoice=new Audio('1023(1).mp3');magVoice.preload='auto';magVoice.volume=1;
+function playMagVoice(){try{magVoice.pause();magVoice.currentTime=0;const p=magVoice.play();if(p&&p.catch)p.catch(()=>{});}catch(e){}}
+function showMagShout(){const layer=$('particleLayer');if(!layer)return;const el=document.createElement('div');el.className='mag-shout';el.innerHTML='¡HAYAYAY!<span>¡MAGDALENA!</span>';layer.appendChild(el);el.addEventListener('animationend',()=>el.remove(),{once:true});}
 async function resolveMatches(matches,combo=1){
  busy=true;
  const board=$("board"), cfg=LEVELS[levelIndex], count=matches.length;
@@ -250,7 +345,7 @@ async function resolveMatches(matches,combo=1){
  const gained=Math.round((normalCount*60+magIdx.length*MAG_POINTS+(magIdx.length>=4?250:0))*mult);
  turnGain+=gained;turnMag+=magIdx.length;
  burstParticles(matches);
- if(magIdx.length){magExplosion(magIdx);sfx("boom")}else sfx(count>=5?"cascade":"match");
+ if(magIdx.length>=3){lightningStrike(magIdx);magExplosion(magIdx);showMagShout();sfx("boom")}else if(magIdx.length){magExplosion(magIdx);sfx("boom")}else sfx(count>=5?"cascade":"match");
  if(combo>1)sfx("combo");
  scorePopup(matches,gained,combo,magIdx.length>0);
  // Primero se ve claramente cómo se rompen las piezas combinadas.
@@ -285,8 +380,8 @@ async function resolveMatches(matches,combo=1){
  await new Promise(resolve=>setTimeout(resolve,340));
  const cascade=findMatches();
  if(cascade.length){await resolveMatches(cascade,combo+1);return;}
- busy=false;$("message").textContent=turnMag?`💛 ¡MAGDALENA! +${turnGain} puntos${combo>1?` · combo x${combo}`:""}`:`¡Bien! +${turnGain} puntos${combo>1?` · combo x${combo}`:""}`;
- if(!hasAnyMove()){newBoard();$("message").textContent="¡Tablero mezclado! Sigue buscando.";render();}
+ busy=false;$("message").textContent=turnMag?`${t('magMsg',{pts:turnGain})}${combo>1?` · ${t('combo')} x${combo}`:""}`:`${t('goodMsg',{pts:turnGain})}${combo>1?` · ${t('combo')} x${combo}`:""}`;
+ if(!hasAnyMove()){newBoard();$("message").textContent=t('reshuffled');render();}
  checkEnd();
 }
 function checkEnd(){const cfg=LEVELS[levelIndex];if(score>=cfg.target&&(cfg.collect<0||collected>=cfg.collectTarget)){busy=true;setTimeout(()=>showAd(),250);return}if(moves<=0){busy=true;showResult(false);}}
@@ -294,20 +389,22 @@ let adOpen=false;
 function showAd(){
  if(adOpen)return;adOpen=true;clearInterval(adTimer);
  const overlay=$("overlay"), photo=$("adPhoto"), count=$("adCount");
- overlay.classList.remove("hidden");photo.src=AD_DATA;photo.onerror=()=>{photo.style.display="none"};photo.onload=()=>{photo.style.display="block"};
- let remain=5;count.textContent=`CONTINUAMOS EN ${remain} SEGUNDOS`;
- adTimer=setInterval(()=>{remain--;if(remain<=0){closeAd();return}count.textContent=`CONTINUAMOS EN ${remain} SEGUNDOS`},1000);
+ overlay.classList.remove("hidden");
+ // Reproducir el audio proporcionado al mostrarse el anuncio.
+ playMagVoice();photo.src=AD_DATA;photo.onerror=()=>{photo.style.display="none"};photo.onload=()=>{photo.style.display="block"};
+ let remain=5;count.textContent=`${t('adCount',{n:remain})}`;
+ adTimer=setInterval(()=>{remain--;if(remain<=0){closeAd();return}count.textContent=`${t('adCount',{n:remain})}`},1000);
 }
 function closeAd(){
  if(!adOpen)return;adOpen=false;clearInterval(adTimer);adTimer=null;$("overlay").classList.add("hidden");
  if(!LEVELS[levelIndex]._peinetaAwarded){awardPeineta();LEVELS[levelIndex]._peinetaAwarded=true;}
  showResult(true);
 }
-function showResult(won){if(won){const st=starsFor();if(st>(bestStars[levelIndex]||0)){bestStars[levelIndex]=st;try{localStorage.setItem("magdalenaStars",JSON.stringify(bestStars))}catch(e){}}}sfx(won?"win":"lose");$("resultOverlay").classList.remove("hidden");$("resultTitle").textContent=won?"¡NIVEL COMPLETADO!":"¡CASI LO LOGRAS!";$("resultDetails").textContent=won?`${"⭐".repeat(starsFor())}${"☆".repeat(3-starsFor())}\nPuntuación: ${score} · ${LEVELS[levelIndex].name}`:`Puntuación: ${score}. Te quedaste sin movimientos.`;$("nextBtn").classList.toggle("hidden",!won||levelIndex===LEVELS.length-1);busy=true}
-function startLevel(i){levelIndex=i;score=0;moves=LEVELS[i].moves;collected=0;selected=null;busy=false;$("home").classList.add("hidden");$("game").classList.remove("hidden");$("resultOverlay").classList.add("hidden");newBoard();render();$("message").textContent="¡A jugar! Intercambia dientes vecinos."}
+function showResult(won){if(won){const st=starsFor();if(st>(bestStars[levelIndex]||0)){bestStars[levelIndex]=st;try{localStorage.setItem("magdalenaStars",JSON.stringify(bestStars))}catch(e){}}}sfx(won?"win":"lose");$("resultOverlay").classList.remove("hidden");$("resultTitle").textContent=won?t('won'):t('lost');$("resultDetails").textContent=won?`${"⭐".repeat(starsFor())}${"☆".repeat(3-starsFor())}\n${t('scoreLine',{score,name:LEVELS[levelIndex].name})}`:t('lostLine',{score});$("nextBtn").classList.toggle("hidden",!won||levelIndex===LEVELS.length-1);busy=true}
+function startLevel(i){levelIndex=i;score=0;moves=LEVELS[i].moves;collected=0;selected=null;busy=false;$("home").classList.add("hidden");$("game").classList.remove("hidden");$("resultOverlay").classList.add("hidden");newBoard();render();$("message").textContent=t('letsGo')}
 function showHome(){$("game").classList.add("hidden");$("home").classList.remove("hidden");$("resultOverlay").classList.add("hidden");busy=false;renderLevels();renderCollectibles()}
-function renderLevels(){renderCollectibles();const el=$("levelGrid");el.innerHTML="";LEVELS.forEach((l,i)=>{let b=document.createElement("button");b.className="levelbtn";b.innerHTML=`<b>NIVEL ${i+1} ${bestStars[i]?"⭐".repeat(bestStars[i]):"☆☆☆"}</b><small>${l.name}</small><small>${l.target.toLocaleString("es-DO")} puntos</small><small>${l.collect<0?"Sin recolección extra":`Recolecta ${l.collectTarget} ${l.collect===6?"Magdalenas":"dientes "+(LABELS[COLORS[l.collect-1]]||"especiales")}`}</small><small>${l.moves} movimientos</small>`;b.addEventListener("click",()=>startLevel(i));el.appendChild(b)})}
-$("playBtn").addEventListener("click",()=>startLevel(0));$("mapBtn").addEventListener("click",showHome);$("restartBtn").addEventListener("click",()=>startLevel(levelIndex));$("shuffleBtn").addEventListener("click",()=>{if(busy)return;sfx("shuffle");newBoard();selected=null;render();$("message").textContent="Tablero mezclado. ¡Busca una combinación!"});$("skipAd").addEventListener("click",closeAd);$("nextBtn").addEventListener("click",()=>{unlocked=Math.max(unlocked,levelIndex+2);startLevel(Math.min(levelIndex+1,LEVELS.length-1))});$("retryBtn").addEventListener("click",()=>startLevel(levelIndex));$("resultMapBtn").addEventListener("click",showHome);
+function renderLevels(){renderCollectibles();const el=$("levelGrid");el.innerHTML="";LEVELS.forEach((l,i)=>{let b=document.createElement("button");b.className="levelbtn";b.innerHTML=`<b>${t('level')} ${i+1} ${bestStars[i]?"⭐".repeat(bestStars[i]):"☆☆☆"}</b><small>${l.name}</small><small>${l.target.toLocaleString(lang==='en'?'en-US':'es-DO')} ${t('pointsWord')}</small><small>${l.collect<0?t('noExtra'):`${t('collectVerb')} ${l.collectTarget} ${collectWhat(l.collect)}`}</small><small>${l.moves} ${t('movesWord')}</small>`;b.addEventListener("click",()=>startLevel(i));el.appendChild(b)})}
+$("playBtn").addEventListener("click",()=>startLevel(0));$("mapBtn").addEventListener("click",showHome);$("restartBtn").addEventListener("click",()=>startLevel(levelIndex));$("shuffleBtn").addEventListener("click",()=>{if(busy)return;sfx("shuffle");newBoard();selected=null;render();$("message").textContent=t('shuffled')});$("skipAd").addEventListener("click",closeAd);$("nextBtn").addEventListener("click",()=>{unlocked=Math.max(unlocked,levelIndex+2);startLevel(Math.min(levelIndex+1,LEVELS.length-1))});$("retryBtn").addEventListener("click",()=>startLevel(levelIndex));$("resultMapBtn").addEventListener("click",showHome);
 
 // Pista automática cuando el jugador se queda mirando el tablero.
 let hintTimer=null;
@@ -316,7 +413,25 @@ function scheduleHint(){clearTimeout(hintTimer);hintTimer=setTimeout(()=>{if(bus
 const _renderBase=render;render=function(){_renderBase();scheduleHint()};
 let bestStars={};try{bestStars=JSON.parse(localStorage.getItem("magdalenaStars")||"{}")}catch(e){}
 function starsFor(){const t=LEVELS[levelIndex].moves,r=moves/t;return r>=.45?3:r>=.25?2:1}
-renderLevels();$("adPhoto").src=AD_DATA;
+$("adPhoto").src=AD_DATA;
+function applyLang(){
+ document.documentElement.lang=lang;
+ document.title="Magdalena Match-3 — Miami";
+ document.querySelectorAll("[data-i18n]").forEach(el=>{el.textContent=t(el.dataset.i18n)});
+ document.querySelectorAll("[data-i18n-html]").forEach(el=>{el.innerHTML=t(el.dataset.i18nHtml)});
+ document.querySelectorAll("[data-i18n-alt]").forEach(el=>{el.alt=t(el.dataset.i18nAlt)});
+ document.querySelectorAll("[data-i18n-title]").forEach(el=>{el.title=t(el.dataset.i18nTitle)});
+ document.querySelectorAll("[data-i18n-aria]").forEach(el=>{el.setAttribute("aria-label",t(el.dataset.i18nAria))});
+ $("langToggle").textContent=lang==="en"?"🌐 EN":"🌐 ES";
+ $("soundToggle").textContent=soundEnabled?t("sound"):t("silence");
+ $("soundToggle").setAttribute("aria-pressed",String(soundEnabled));
+ $("musicToggle").textContent=musicEnabled?t("musicOn"):t("musicOff");
+ $("musicToggle").setAttribute("aria-pressed",String(musicEnabled));
+ renderCollectibles();
+ if($("game").classList.contains("hidden"))renderLevels();else render();
+}
+$("langToggle").addEventListener("click",()=>{lang=lang==="es"?"en":"es";try{localStorage.setItem("magdalenaLang",lang)}catch(e){}applyLang()});
+applyLang();
 </script>
 </body>
 </html>
