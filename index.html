@@ -36,7 +36,7 @@ button{font:inherit;font-weight:850;border:0;cursor:pointer;touch-action:manipul
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
 
-/* Arrastrar dientes: gesto táctil y ratón */
+/* Arrastrar muelas: gesto táctil y ratón */
 .board{touch-action:none; user-select:none;-webkit-user-select:none}
 .cell{touch-action:none;transition:transform .12s,background .12s}
 .cell.drag-origin{transform:scale(.94);background:#ffe66d55;z-index:2}
@@ -220,41 +220,49 @@ let lang='es';
 try{const saved=localStorage.getItem('magdalenaLang');if(saved==='en'||saved==='es')lang=saved}catch(e){}
 const I18N={
  es:{sound:"🔊 Sonido",silence:"🔇 Silencio",musicOn:"🎵 Música: ON",musicOff:"🎵 Música: OFF",soundTitle:"Activar o desactivar sonidos",musicTitle:"Activar o desactivar música suave",
- ready:"¡LISTO PARA JUGAR!",heroTitle:"¡Dientes al<br>ataque!",heroDesc:"Intercambia dientes vecinos y forma grupos de 3 o más del mismo color. ¡No hay espera inicial! ¡Cuando Magdalena aparece en el tablero, combínala: explota en grande y da <b>puntos extra</b>! Encadena combos para multiplicar tus puntos.",
+ ready:"¡LISTO PARA JUGAR!",heroTitle:"¡Muelas al<br>ataque!",heroDesc:"Intercambia muelas vecinos y forma grupos de 3 o más del mismo color. ¡No hay espera inicial! ¡Cuando Magdalena aparece en el tablero, combínala: explota en grande y da <b>puntos extra</b>! Encadena combos para multiplicar tus puntos.",
  play:"▶ JUGAR AHORA",chooseLevel:"Elige un nivel",combTitle:"PEINETA GLOBAL",combs:"{n} / 5 peinetas",combAlt:"Peineta dorada",podiumTitle:"🏆 PODIO DE MAGDALENA",locked:"Consigue 5 peinetas para desbloquearla",unlocked:"¡Magdalena desbloqueada!",headAlt:"Cabeza de Magdalena",
  menuLevels:"☰ NIVELES",levels:"NIVELES",score:"Puntuación",moves:"Movimientos",target:"Objetivo",collectDefault:"Recolectar",extraGoal:"Objetivo extra",
- hintDefault:"Selecciona un diente y luego uno vecino para intercambiarlos. Solo cuentan las combinaciones que hagas manualmente.",restart:"↻ REINICIAR",shuffle:"⤨ MEZCLAR",footer:"Magdalena Match-3 — Miami · Juego HTML",boardAria:"Tablero de juego",
+ hintDefault:"Selecciona un muela y luego uno vecino para intercambiarlos. Solo cuentan las combinaciones que hagas manualmente.",restart:"↻ REINICIAR",shuffle:"⤨ MEZCLAR",footer:"Magdalena Match-3 — Miami · Juego HTML",boardAria:"Tablero de juego",
  adTag:"✦ ANUNCIO ✦",adSlogan:"Magdalena te lo dijo",adAlt:"Fotografía original del anuncio",skipAd:"➜ SALTAR ANUNCIO",adCount:"CONTINUAMOS EN {n} SEGUNDOS",
  won:"¡NIVEL COMPLETADO!",lost:"¡CASI LO LOGRAS!",next:"SIGUIENTE NIVEL ➜",retry:"↻ REINTENTAR",scoreLine:"Puntuación: {score} · {name}",lostLine:"Puntuación: {score}. Te quedaste sin movimientos.",
- level:"NIVEL",letsGo:"¡A jugar! Intercambia dientes vecinos.",noMatch:"¡Ese intercambio no forma una combinación!",reshuffled:"¡Tablero mezclado! Sigue buscando.",shuffled:"Tablero mezclado. ¡Busca una combinación!",
+ level:"NIVEL",letsGo:"¡A jugar! Intercambia muelas vecinos.",noMatch:"¡Ese intercambio no forma una combinación!",reshuffled:"¡Tablero mezclado! Sigue buscando.",shuffled:"Tablero mezclado. ¡Busca una combinación!",
  goodMsg:"¡Bien! +{pts} puntos",magMsg:"💛 ¡MAGDALENA! +{pts} puntos",combo:"combo",magPop:"★ ¡MAGDALENA! ★",blockedCell:"Casilla bloqueada",piece:"Pieza",special:"especiales",
- collectVerb:"Recolecta",noExtra:"Sin recolección extra",movesWord:"movimientos",pointsWord:"puntos",magPlural:"Magdalenas",teethOf:"dientes {color}",collectMagLabel:"Recolectar Magdalenas",collectTeethLabel:"Recolectar dientes {color}",
+ collectVerb:"Recolecta",noExtra:"Sin recolección extra",movesWord:"movimientos",pointsWord:"puntos",magPlural:"Magdalenas",molarsOf:"muelas {color}",collectMagLabel:"Recolectar Magdalenas",collectMolarsLabel:"Recolectar muelas {color}",
  goalOnly:"Objetivo: consigue {target} puntos.",goalFull:"Objetivo: consigue {target} puntos Y recolecta {n} {what}. Solo cuentan los que elimines en combinaciones. Magdalena vale {pts} puntos por ficha.",
  colors:{red:"rojo",blue:"azul",green:"verde",gold:"dorado",yellow:"amarillo",magdalena:"Magdalena"}},
  en:{sound:"🔊 Sound",silence:"🔇 Muted",musicOn:"🎵 Music: ON",musicOff:"🎵 Music: OFF",soundTitle:"Turn sounds on or off",musicTitle:"Turn soft music on or off",
- ready:"READY TO PLAY!",heroTitle:"Teeth<br>attack!",heroDesc:"Swap neighboring teeth and make groups of 3 or more of the same color. No waiting at the start! When Magdalena appears on the board, match her: she explodes big and gives <b>bonus points</b>! Chain combos to multiply your points.",
+ ready:"READY TO PLAY!",heroTitle:"Molars<br>attack!",heroDesc:"Swap neighboring molars and make groups of 3 or more of the same color. No waiting at the start! When Magdalena appears on the board, match her: she explodes big and gives <b>bonus points</b>! Chain combos to multiply your points.",
  play:"▶ PLAY NOW",chooseLevel:"Choose a level",combTitle:"GLOBAL COMB",combs:"{n} / 5 combs",combAlt:"Golden comb",podiumTitle:"🏆 MAGDALENA'S PODIUM",locked:"Collect 5 combs to unlock her",unlocked:"Magdalena unlocked!",headAlt:"Magdalena's head",
  menuLevels:"☰ LEVELS",levels:"LEVELS",score:"Score",moves:"Moves",target:"Target",collectDefault:"Collect",extraGoal:"Extra goal",
- hintDefault:"Select a tooth, then a neighbor to swap them. Only combos you make manually count.",restart:"↻ RESTART",shuffle:"⤨ SHUFFLE",footer:"Magdalena Match-3 — Miami · HTML game",boardAria:"Game board",
+ hintDefault:"Select a molar, then a neighbor to swap them. Only combos you make manually count.",restart:"↻ RESTART",shuffle:"⤨ SHUFFLE",footer:"Magdalena Match-3 — Miami · HTML game",boardAria:"Game board",
  adTag:"✦ AD ✦",adSlogan:"Magdalena told you so",adAlt:"Original ad photo",skipAd:"➜ SKIP AD",adCount:"CONTINUING IN {n} SECONDS",
  won:"LEVEL COMPLETE!",lost:"SO CLOSE!",next:"NEXT LEVEL ➜",retry:"↻ RETRY",scoreLine:"Score: {score} · {name}",lostLine:"Score: {score}. You ran out of moves.",
- level:"LEVEL",letsGo:"Let's go! Swap neighboring teeth.",noMatch:"That swap doesn't make a match!",reshuffled:"Board reshuffled! Keep looking.",shuffled:"Board shuffled. Find a match!",
+ level:"LEVEL",letsGo:"Let's go! Swap neighboring molars.",noMatch:"That swap doesn't make a match!",reshuffled:"Board reshuffled! Keep looking.",shuffled:"Board shuffled. Find a match!",
  goodMsg:"Nice! +{pts} points",magMsg:"💛 MAGDALENA! +{pts} points",combo:"combo",magPop:"★ MAGDALENA! ★",blockedCell:"Blocked cell",piece:"Piece",special:"special",
- collectVerb:"Collect",noExtra:"No extra goal",movesWord:"moves",pointsWord:"points",magPlural:"Magdalenas",teethOf:"{color} teeth",collectMagLabel:"Collect Magdalenas",collectTeethLabel:"Collect {color} teeth",
+ collectVerb:"Collect",noExtra:"No extra goal",movesWord:"moves",pointsWord:"points",magPlural:"Magdalenas",molarsOf:"{color} molars",collectMagLabel:"Collect Magdalenas",collectMolarsLabel:"Collect {color} molars",
  goalOnly:"Goal: reach {target} points.",goalFull:"Goal: reach {target} points AND collect {n} {what}. Only pieces you clear in combos count. Magdalena is worth {pts} points each.",
  colors:{red:"red",blue:"blue",green:"green",gold:"gold",yellow:"yellow",magdalena:"Magdalena"}}
 };
 function t(k,v){let s=(I18N[lang]&&I18N[lang][k]!==undefined)?I18N[lang][k]:(I18N.es[k]!==undefined?I18N.es[k]:k);if(v)for(const key in v)s=s.split("{"+key+"}").join(v[key]);return s}
 function labelOf(c){return (I18N[lang].colors[c])||""}
-function collectWhat(c){return c===6?t("magPlural"):t("teethOf",{color:labelOf(COLORS[c-1])||t("special")})}
-function collectLabel(c){return c===6?t("collectMagLabel"):t("collectTeethLabel",{color:labelOf(COLORS[c-1])||t("special")})}
+function collectWhat(c){return c===6?t("magPlural"):t("molarsOf",{color:labelOf(COLORS[c-1])||t("special")})}
+function collectLabel(c){return c===6?t("collectMagLabel"):t("collectMolarsLabel",{color:labelOf(COLORS[c-1])||t("special")})}
 const COLORS = ["red","blue","green","gold","yellow","magdalena"];
 const $ = id => document.getElementById(id);
 // Efectos de sonido generados localmente con Web Audio (sin archivos externos).
 let soundEnabled=true, audioCtx=null;
 function audioReady(){if(!soundEnabled)return null;try{if(!audioCtx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;audioCtx=new AC()}if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch(e){return null}}
 function tone(freq,duration=.09,wave='sine',volume=.04,delay=0){const ctx=audioReady();if(!ctx)return;const t=ctx.currentTime+delay,osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=wave;osc.frequency.setValueAtTime(freq,t);gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(volume,t+.012);gain.gain.exponentialRampToValueAtTime(.0001,t+duration);osc.connect(gain);gain.connect(ctx.destination);osc.start(t);osc.stop(t+duration+.02)}
-function sfx(name){if(!soundEnabled)return;switch(name){case 'grab':tone(520,.055,'triangle',.025);break;case 'select':tone(440,.06,'sine',.025);tone(620,.07,'sine',.022,.045);break;case 'swap':tone(360,.07,'triangle',.035);tone(500,.09,'triangle',.03,.055);break;case 'invalid':tone(210,.12,'square',.018);tone(170,.14,'square',.014,.09);break;case 'match':tone(520,.1,'sine',.04);tone(660,.11,'sine',.04,.06);tone(790,.15,'triangle',.045,.12);break;case 'drop':tone(390,.06,'triangle',.018);break;case 'cascade':tone(660,.08,'sine',.035);tone(880,.12,'triangle',.04,.07);break;case 'lightning':{const ctx=audioReady();if(ctx){const now=ctx.currentTime;const length=Math.floor(ctx.sampleRate*.72),buffer=ctx.createBuffer(1,length,ctx.sampleRate),data=buffer.getChannelData(0);for(let i=0;i<length;i++){const t=i/length;data[i]=(Math.random()*2-1)*Math.pow(1-t,1.7)}const makeNoise=(when,filterType,frequency,peak,attack,decay,duration)=>{const src=ctx.createBufferSource();src.buffer=buffer;const filter=ctx.createBiquadFilter();filter.type=filterType;filter.frequency.setValueAtTime(frequency,when);const gain=ctx.createGain();gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(peak,when+attack);gain.gain.exponentialRampToValueAtTime(.0001,when+decay);src.connect(filter);filter.connect(gain);gain.connect(ctx.destination);src.start(when);src.stop(when+duration)};makeNoise(now,'highpass',1100,.42,.006,.19,.2);makeNoise(now+.045,'lowpass',260,.5,.09,.68,.7);makeNoise(now+.13,'lowpass',420,.22,.045,.42,.44);const hit=ctx.createOscillator(),hg=ctx.createGain();hit.type='sawtooth';hit.frequency.setValueAtTime(145,now);hit.frequency.exponentialRampToValueAtTime(42,now+.42);hg.gain.setValueAtTime(.0001,now);hg.gain.exponentialRampToValueAtTime(.32,now+.025);hg.gain.exponentialRampToValueAtTime(.0001,now+.48);hit.connect(hg);hg.connect(ctx.destination);hit.start(now);hit.stop(now+.5)}tone(1500,.09,'sawtooth',.16);tone(980,.13,'square',.11,.045);tone(115,.42,'sawtooth',.18,.035);break;}case 'boom':tone(130,.28,'sawtooth',.05);tone(75,.34,'sine',.07,.02);[784,988,1318,1760].forEach((f,i)=>tone(f,.16,'triangle',.04,.05+i*.06));break;case 'combo':tone(700,.07,'triangle',.035);tone(930,.1,'triangle',.04,.06);break;case 'peineta':tone(660,.12,'sine',.04);tone(880,.14,'sine',.04,.1);tone(1100,.22,'triangle',.045,.2);break;case 'win':[523,659,784,1047].forEach((f,i)=>tone(f,.2,'sine',.04,i*.11));break;case 'lose':tone(392,.18,'triangle',.03);tone(330,.22,'triangle',.03,.16);tone(262,.3,'sine',.03,.32);break;case 'shuffle':tone(330,.06,'triangle',.025);tone(440,.06,'triangle',.025,.06);tone(550,.08,'triangle',.025,.12);break}}
+function sfx(name){if(!soundEnabled)return;switch(name){case 'grab':tone(520,.055,'triangle',.025);break;case 'select':tone(440,.06,'sine',.025);tone(620,.07,'sine',.022,.045);break;case 'swap':tone(360,.07,'triangle',.035);tone(500,.09,'triangle',.03,.055);break;case 'invalid':tone(210,.12,'square',.018);tone(170,.14,'square',.014,.09);break;case 'match':tone(520,.1,'sine',.04);tone(660,.11,'sine',.04,.06);tone(790,.15,'triangle',.045,.12);break;case 'drop':tone(390,.06,'triangle',.018);break;case 'cascade':tone(660,.08,'sine',.035);tone(880,.12,'triangle',.04,.07);break;case 'lightning':{const ctx=audioReady();if(ctx){const now=ctx.currentTime;
+ // Descarga eléctrica de plasma: chasquido brillante, arco tonal descendente y cola de energía.
+ const len=Math.floor(ctx.sampleRate*.48),buf=ctx.createBuffer(1,len,ctx.sampleRate),data=buf.getChannelData(0);
+ for(let i=0;i<len;i++){const t=i/len;data[i]=(Math.random()*2-1)*Math.pow(1-t,2.25)}
+ const zap=(start,dur,low,high,peak,type='bandpass',q=1)=>{const src=ctx.createBufferSource();src.buffer=buf;const f=ctx.createBiquadFilter();f.type=type;f.Q.value=q;f.frequency.setValueAtTime(high,start);f.frequency.exponentialRampToValueAtTime(Math.max(80,low),start+dur);const g=ctx.createGain();g.gain.setValueAtTime(.0001,start);g.gain.exponentialRampToValueAtTime(peak,start+.008);g.gain.exponentialRampToValueAtTime(.0001,start+dur);src.connect(f);f.connect(g);g.connect(ctx.destination);src.start(start);src.stop(start+dur+.015)};
+ zap(now,.24,180,5200,.34,'highpass',.7);zap(now+.018,.36,120,2100,.25,'bandpass',1.2);zap(now+.075,.48,90,650,.19,'lowpass',.8);
+ const arc=ctx.createOscillator(),ag=ctx.createGain(),af=ctx.createBiquadFilter();arc.type='sawtooth';arc.frequency.setValueAtTime(1850,now);arc.frequency.exponentialRampToValueAtTime(145,now+.23);arc.frequency.exponentialRampToValueAtTime(620,now+.36);arc.frequency.exponentialRampToValueAtTime(90,now+.58);af.type='lowpass';af.frequency.setValueAtTime(4200,now);af.frequency.exponentialRampToValueAtTime(700,now+.5);ag.gain.setValueAtTime(.0001,now);ag.gain.exponentialRampToValueAtTime(.22,now+.012);ag.gain.exponentialRampToValueAtTime(.0001,now+.59);arc.connect(af);af.connect(ag);ag.connect(ctx.destination);arc.start(now);arc.stop(now+.61);
+ const crack=ctx.createOscillator(),cg=ctx.createGain();crack.type='square';crack.frequency.setValueAtTime(2400,now);crack.frequency.exponentialRampToValueAtTime(360,now+.09);cg.gain.setValueAtTime(.0001,now);cg.gain.exponentialRampToValueAtTime(.12,now+.004);cg.gain.exponentialRampToValueAtTime(.0001,now+.12);crack.connect(cg);cg.connect(ctx.destination);crack.start(now);crack.stop(now+.13)
+}break;}case 'boom':tone(130,.28,'sawmolar',.05);tone(75,.34,'sine',.07,.02);[784,988,1318,1760].forEach((f,i)=>tone(f,.16,'triangle',.04,.05+i*.06));break;case 'combo':tone(700,.07,'triangle',.035);tone(930,.1,'triangle',.04,.06);break;case 'peineta':tone(660,.12,'sine',.04);tone(880,.14,'sine',.04,.1);tone(1100,.22,'triangle',.045,.2);break;case 'win':[523,659,784,1047].forEach((f,i)=>tone(f,.2,'sine',.04,i*.11));break;case 'lose':tone(392,.18,'triangle',.03);tone(330,.22,'triangle',.03,.16);tone(262,.3,'sine',.03,.32);break;case 'shuffle':tone(330,.06,'triangle',.025);tone(440,.06,'triangle',.025,.06);tone(550,.08,'triangle',.025,.12);break}}
 const soundBtn=document.getElementById('soundToggle');if(soundBtn)soundBtn.addEventListener('click',()=>{soundEnabled=!soundEnabled;soundBtn.textContent=soundEnabled?t('sound'):t('silence');soundBtn.setAttribute('aria-pressed',String(soundEnabled));if(soundEnabled){audioReady();sfx('select')}})
 // Música ambiental suave generada en el navegador; no necesita archivos externos.
 let musicEnabled=false, musicTimer=null, musicStep=0, musicGain=null;
@@ -285,7 +293,7 @@ function newBoard(){const cfg=LEVELS[levelIndex];grid=Array.from({length:size},(
 function findMatches(){let set=new Set();for(let y=0;y<size;y++){let x=0;while(x<size){let t=grid[y][x],end=x+1;if(!t||blocked(x,y)){x++;continue}while(end<size&&!blocked(end,y)&&grid[y][end]===t)end++;if(end-x>=3)for(let k=x;k<end;k++)set.add(y*size+k);x=end}}
 for(let x=0;x<size;x++){let y=0;while(y<size){let t=grid[y][x],end=y+1;if(!t||blocked(x,y)){y++;continue}while(end<size&&!blocked(x,end)&&grid[end][x]===t)end++;if(end-y>=3)for(let k=y;k<end;k++)set.add(k*size+x);y=end}}return [...set]}
 function render(){const board=$("board");board.innerHTML="";for(let y=0;y<size;y++)for(let x=0;x<size;x++){let c=document.createElement("button");c.className="cell"+(blocked(x,y)?" blocked":"")+(selected&&selected.x===x&&selected.y===y?" selected":"");c.setAttribute("aria-label",blocked(x,y)?t('blockedCell'):`${t('piece')} ${grid[y][x]===6?"Magdalena":(labelOf(COLORS[grid[y][x]-1])||"")}`);if(!blocked(x,y)){let im=document.createElement("img");im.className="tile"+(grid[y][x]===6?" mag":"");im.draggable=false;im.src=makeImg(grid[y][x]);im.alt="";im.style.animationDelay=((x*31+y*17)%130)+"ms";c.dataset.x=x;c.dataset.y=y;c.appendChild(im);c.addEventListener("click",()=>{if(Date.now()<(window.dragHandledUntil||0))return;pick(x,y)});}board.appendChild(c)}$("score").textContent=score;$("moves").textContent=moves;$("target").textContent=LEVELS[levelIndex].target;$("levelLabel").textContent=`${t('level')} ${levelIndex+1} · ${LEVELS[levelIndex].name.toUpperCase()}`;const cfg=LEVELS[levelIndex];$("collectStat").classList.toggle("hidden",cfg.collect<0);$("collectStat").querySelector("small").textContent=cfg.collect<0?t('extraGoal'):collectLabel(cfg.collect);$("collect").textContent=cfg.collect<0?"—":`${collected}/${cfg.collectTarget}`;$("hint").textContent=cfg.collect<0?t('goalOnly',{target:cfg.target}):t('goalFull',{target:cfg.target,n:cfg.collectTarget,what:collectWhat(cfg.collect),pts:MAG_POINTS});}
-// Permite intercambiar dientes arrastrando con ratón o dedo.
+// Permite intercambiar muelas arrastrando con ratón o dedo.
 let dragStart=null, dragMoved=false;
 const dragBoard=$("board");
 let dragGhost=null;
@@ -353,7 +361,7 @@ async function resolveMatches(matches,combo=1){
  for(const i of matches){const y=Math.floor(i/size),x=i%size;if(grid[y][x]===cfg.collect)collected++;}
  score+=gained;$("score").textContent=score;
  await new Promise(resolve=>setTimeout(resolve,magIdx.length?340:210));
- // Guardar de qué fila viene cada diente superviviente para animar su caída.
+ // Guardar de qué fila viene cada muela superviviente para animar su caída.
  const origins=Array.from({length:size},()=>Array(size).fill(null));
  for(let x=0;x<size;x++){
    const ys=[];for(let y=size-1;y>=0;y--)if(!blocked(x,y))ys.push(y);
@@ -366,7 +374,7 @@ async function resolveMatches(matches,combo=1){
    ys.forEach((y,i)=>{const item=vals[i];grid[y][x]=item.type;origins[y][x]=item.fromY;});
  }
  selected=null;render();
- // FLIP: los dientes nuevos empiezan por encima del tablero y los existentes
+ // FLIP: los muelas nuevos empiezan por encima del tablero y los existentes
  // parten de su posición anterior. Así se ve el desplazamiento, no un reemplazo instantáneo.
  const boardRect=board.getBoundingClientRect();
  for(let y=0;y<size;y++)for(let x=0;x<size;x++){
